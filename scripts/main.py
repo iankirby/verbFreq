@@ -22,7 +22,7 @@ else:
     if(sys.argv[1]=="Old"):
         var="Old English"
         decidePath()
-    elif()
+    elif():
     var=sys.argv[1]
     decidePath(var)
         
