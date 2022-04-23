@@ -1,13 +1,21 @@
-import re, subprocess, os, sys
+import re, subprocess, os, sys, csv
 
 def openDir(name,path):
-    dir=os.listdir(path)
     
+    out_name="../Files/"+name+".txt"
+    fl_out=open(out_name,"r+",encoding="utf8")
+    fl_out.truncate(0)
+    fl_out.close()
+
+    dir=os.listdir(path)
+
     if(name=="Greek" or name=="Latin"):
+
         i=0
         while(i<len(dir)):
             subprocess.call(['python','perseusRegex.py',name,path,dir[i]])
             i=i+1
+        subprocess.call(['bash','../Files/toCSV.sh',out_name])
 
     else:
         print("Still need to write English regexes")
