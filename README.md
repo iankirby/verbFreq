@@ -1,2 +1,2 @@
-# verbPreq
+# verbFreq
 frequency of verbs
