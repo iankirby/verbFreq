@@ -1,6 +1,25 @@
 import re, subprocess, os, sys, csv
 
-def openDir(name,path):
+def openEng(name,path):
+    out_name="../Files/"+name+".txt"
+    # print(out_name)
+    fl_out=open(out_name,'r+',encoding="utf-8")
+    fl_out.truncate(0)
+    fl_out.close()
+
+    dir=os.listdir(path)
+    # print(dir)
+    
+    i=0
+    while(i<len(dir)):
+        subprocess.call(['perl','oe.pl',name, path, dir[i]])
+        # i=i+1
+        break
+
+
+
+#For greek and latin
+def openGreekLatin(name,path):
     
     out_name="../Files/"+name+".txt"
     fl_out=open(out_name,"r+",encoding="utf8")
@@ -9,29 +28,26 @@ def openDir(name,path):
 
     dir=os.listdir(path)
 
-    if(name=="Greek" or name=="Latin"):
+    i=0
+    while(i<len(dir)):
+        subprocess.call(['python','perseusRegex.py',name,path,dir[i]])
+        i=i+1
+    subprocess.call(['bash','../Files/toCSV.sh',out_name])
 
-        i=0
-        while(i<len(dir)):
-            subprocess.call(['python','perseusRegex.py',name,path,dir[i]])
-            i=i+1
-        subprocess.call(['bash','../Files/toCSV.sh',out_name])
 
-    else:
-        print("Still need to write English regexes")
-
+#Which path it goes through
 def decidePath(var):
     if (var=="Greek" or var=="greek"):
-        openDir("Greek","../pre/Greek/")
+        openGreekLatin("Greek","../pre/Greek/")
     elif (var=="Latin" or var=="latin"):
-        openDir("Latin","../pre/Latin/")
+        openGreekLatin("Latin","../pre/Latin/")
         # print(title)
     elif(var=="Old English"):
-        openDir(var,"../pre/OldEnglish")
+        openEng(var,"../pre/OldEnglish/")
     elif(var=="Middle English"):
-        openDir(var,"../pre/MiddleEnglish")
+        openEng(var,"../pre/MiddleEnglish/")
     elif(var=="Early Modern English"):
-        openDir(var,"../pre/EarlyModernEnglish")
+        openEng(var,"../pre/EarlyModernEnglish/")
     else:
         print("don't know")
 
