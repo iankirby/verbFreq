@@ -16,6 +16,10 @@ i=0
 
 str=""
 
+
+
+### This method adds everything to a really big string which is then converted to a csv
+
 while (i<len(plain)):
 # while (i<10):
     curr=plain[i]
@@ -23,22 +27,30 @@ while (i<len(plain)):
       
         form=re.search("form=\"[^\"]*\"",curr)
         form=form.group()
+        form_cln=re.split("=",form)
+        form=form_cln[1]
         # form=re.search("\"[^\"\]*\"",form)
         # form=form.group()
         
 
         lemma=re.search("lemma=\"[^\"]*\"",curr)
         lemma=lemma.group()
+        lemma=re.split("=",lemma)
+        lemma=lemma[1]
         # lemma=re.search("\"[^\"]*\"",lemma)
         # lemma=lemma.group()
 
         postag=re.search("postag=\"[^\"]*\"",curr)
         postag=postag.group()
+        postag=re.split("\=",postag)
+        postag=postag[1]
         # postag=re.search("\"[^\"]*\"",postag)
         # postag=postag.group()
 
         relation=re.search("relation=\"[^\"]*\"",curr)
         relation=relation.group()
+        # relation=re.split("\=",relation)
+        # relation=relation[1]
         # relation=re.search("\"[^\"]*\"",relation)
         # relation=relation.group()
 
