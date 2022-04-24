@@ -2,10 +2,7 @@
 
 [/Latin Notes](/notes/Latin.md)
 
-
-## things
-
-frequency of verbs
+The Greek and Latin come from [Perseus](http://www.perseus.tufts.edu/hopper/opensource/download).
 
 * For the open source perseus, deleted some of the files because they were empty
      ```
