@@ -21,6 +21,7 @@ def openEng(name,path):
 #For greek and latin
 def openGreekLatin(name,path):
     
+    #truncuate the file first
     out_name="../Files/"+name+".txt"
     fl_out=open(out_name,"r+",encoding="utf8")
     fl_out.truncate(0)
