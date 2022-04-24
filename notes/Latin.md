@@ -18,6 +18,7 @@ That is, in order of frequency: 3SG > 3PL > 1SG > 2SG > 1PL > 2PL.
 * [All verbs](/RDir/Lat_all_fin_pct.csv)
 * [Percentages for verbs with 10 or more tokens](/RDir/latin_finite_ten_or_more.csv)
 * [percentages, all verbs](/RDir/all_verbs_aggregated_percentages.csv)
+    * [sums for all verbs, etc](/RDir/totalsAllAggregates.csv)
 * [Distribution of person number combinations of the top 20 most frequent verbs](/RDir/Latin_top_20_finite.csv)
 
 These are the top 20 verbs (in alphabetical order because I didn't feel like sorting).  I bolded the greatest percentage and italicized the second highest.
@@ -45,7 +46,7 @@ These are the top 20 verbs (in alphabetical order because I didn't feel like sor
 |video1  |214  |77 |0.3598            |7  |0.0327             |32 |*0.1495*            |10 |0.0467             |57  |**0.2664**           |31 |0.1449            |
 |volo1   |100  |14 |0.14              |0  |0                  |19 |0.19              |4  |0.04               |42  |**0.42**             |21 |*0.21*              |
 
-
+![cool](/RDir/cool.png)
 
 ## *volo*
 
