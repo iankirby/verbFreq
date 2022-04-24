@@ -22,8 +22,21 @@ while (my $row=<$fh>){ $plain=$plain.$row;}
 
 # print $plain;
 
+$plain=~s/\<[^\n]*\n//;
+
 $plain=~s/\n(?!\n)//g;
 
+my @asArray=split("\n",$plain);
+
+my $i=0;
+
+while ($i<=scalar@asArray){
+    my $curr=$asArray[$i];
+    # $curr=~m/(\_VB[]||)/g;
+}
+
+
+# print$plain;
 
 # print$plain;
 # print$file;

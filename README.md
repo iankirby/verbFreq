@@ -1,5 +1,10 @@
 # verbFreq
 
+[/Latin Notes](/notes/Latin.md)
+
+
+## things
+
 frequency of verbs
 
 * For the open source perseus, deleted some of the files because they were empty
