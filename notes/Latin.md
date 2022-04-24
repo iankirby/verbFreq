@@ -62,3 +62,6 @@ There are 100 tokens of *volo* (lemma = ```volo1```)
 
 That is, the order of frequencies is basically the same: 3SG > 3PL > 1SG > 2SG > 2PL > 1PL.
 
+# April 24, 2022
+
+Not all of the Perseus corpus is fully lemmatized, which is why the figures in the above are so low.

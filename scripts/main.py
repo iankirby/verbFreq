@@ -16,7 +16,8 @@ def openEng(name,path):
         # i=i+1
         break
 
-
+def getVolo():
+    out_name="../Files/Volo.txt"
 
 #For greek and latin
 def openGreekLatin(name,path):
@@ -59,6 +60,8 @@ else:
         decidePath("Old English")
     elif(sys.argv[1]=="Middle"):
         decidePath("Middle English")
+    elif(sys.argv[1]=="Latin" and sys.argv[2]=="volo"):
+        getVolo()
     else:
         decidePath(sys.argv[1])
         

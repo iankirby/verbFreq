@@ -2,7 +2,7 @@
 
 [/Latin Notes](/notes/Latin.md)
 
-The Greek and Latin come from [Perseus](http://www.perseus.tufts.edu/hopper/opensource/download).
+The Greek and Latin come from [Perseus](http://www.perseus.tufts.edu/hopper/opensource/download), as well as 
 
 * For the open source perseus, deleted some of the files because they were empty
      ```
