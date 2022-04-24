@@ -16,8 +16,42 @@ def openEng(name,path):
         # i=i+1
         break
 
-def getVolo():
-    out_name="../Files/Volo.txt"
+#Loop specifically for getting the volo instances
+def callGetVolo():
+    volo_floop="../Files/volos_floop.txt"
+    fl_out=open(volo_floop,"r+",encoding="utf8")
+    fl_out.truncate(0)
+    fl_out.write("lemma, form, text\n")
+    fl_out.close()
+
+    volo_floop_tb="../Files/volo_floop_tb.txt"
+    fl_out2=open(volo_floop_tb,'r+',encoding='utf8')
+    fl_out2.truncate(0)
+    fl_out2.write("Still need to write this part...")
+    fl_out2.close()
+
+
+    dir=os.listdir("../pre/Latin/")
+    
+    i=0
+    while (i<len(dir)):
+        curr=dir[i]
+        last=curr[-7:]
+        if (last=="lat.txt" or last=="at1.txt"):
+            subprocess.call(['perl','getVolo.pl','../pre/Latin/',curr])
+            break
+            # subprocess.call(['python','getVolo.py',curr,'ntb'])
+            # print(last)
+            # pass
+        elif(last==".tb.txt"):
+            print("Passing *.tb.txt file")
+            pass
+        else:
+        # elif(curr=="how.hdt.txt" or curr=="cope.rhet.txt" or curr==):
+           print("Passing "+curr)
+        
+        i=i+1
+    
 
 #For greek and latin
 def openGreekLatin(name,path):
@@ -61,7 +95,7 @@ else:
     elif(sys.argv[1]=="Middle"):
         decidePath("Middle English")
     elif(sys.argv[1]=="Latin" and sys.argv[2]=="volo"):
-        getVolo()
+        callGetVolo()
     else:
         decidePath(sys.argv[1])
         

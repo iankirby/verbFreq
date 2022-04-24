@@ -64,4 +64,4 @@ That is, the order of frequencies is basically the same: 3SG > 3PL > 1SG > 2SG >
 
 # April 24, 2022
 
-Not all of the Perseus corpus is fully lemmatized, which is why the figures in the above are so low.
+Not all of the Perseus corpus is fully lemmatized, which is why the figures in the above are so low.  I added a new function in [main.py](/scripts/main.py) to branch to another script [getVolo.pl](/scripts/getVolo.pl)
